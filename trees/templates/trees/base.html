@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Trees Everywhere</title>
+</head>
+<body>
+  <div class="container">
+    {% if user.is_authenticated %}
+      <p>
+        Hello, {{ user.username }} |
+        <a href="{% url 'logout' %}">Logout</a>
+      </p>
+      <nav>
+        <a href="{% url 'user_trees' %}">My Trees</a>
+        <a href="{% url 'add_planted_tree' %}">+ Plant New</a>
+        <a href="{% url 'account_trees' %}">🌍 Trees from My Accounts</a>
+      </nav>
+    {% else %}
+      <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+
+    <hr>
+
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

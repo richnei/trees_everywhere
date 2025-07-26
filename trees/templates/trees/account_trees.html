@@ -1,0 +1,16 @@
+{% extends "trees/base.html" %}
+{% block content %}
+  <h2>Trees Planted in My Accounts</h2>
+  <ul>
+    {% for t in trees %}
+      <li>
+        {{ t.tree.name }} planted by {{ t.user.username }}
+        — coordinates: ({{ t.location_lat }}, {{ t.location_lon }})
+        — on {{ t.planted_at|date:"d/m/Y H:i" }}
+        — Account: {{ t.account.name }}
+      </li>
+    {% empty %}
+      <li>No trees found in the accounts you belong to.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
