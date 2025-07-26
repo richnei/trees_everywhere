@@ -70,6 +70,27 @@ Todos os testes estão localizados em `trees/tests.py` e cobrem:
 
 ---
 
+## 📬 Endpoints
+
+### 🌐 Web
+
+| Caminho                     | Método | Descrição                                                 | Autenticado |
+|----------------------------|--------|-----------------------------------------------------------|-------------|
+| `/`                        | GET    | Lista de árvores plantadas pelo usuário                  | ✅ Sim       |
+| `/tree/<id>/`              | GET    | Detalhes de uma árvore plantada                           | ✅ Sim       |
+| `/add/`                    | GET/POST | Formulário para plantar nova árvore                     | ✅ Sim       |
+| `/accounts/trees/`         | GET    | Lista de árvores plantadas nas contas do usuário         | ✅ Sim       |
+
+### 🧪 API (JSON)
+
+| Caminho               | Método | Descrição                                       | Autenticado |
+|----------------------|--------|-------------------------------------------------|-------------|
+| `/api/my-trees/`     | GET    | Retorna as árvores plantadas pelo usuário logado (JSON) | ✅ Sim       |
+
+---
+
+
+
 ## 🔁 Fluxo resumido
 
 ```mermaid
