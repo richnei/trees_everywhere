@@ -74,10 +74,10 @@ Todos os testes estão localizados em `trees/tests.py` e cobrem:
 
 ```mermaid
 graph TD;
-    🔐Login --> 🏠Menu
-    🏠Menu -->|🌳 My Trees| 📋UserTreeList
-    🏠Menu -->|➕ Plant New| 📝AddTreeForm
-    🏠Menu -->|🌍 Account Trees| 🌐AccountTreeList
-    📋UserTreeList --> 🔍TreeDetail
+    Login --> Menu
+    Menu -->|My Trees| UserTreeList
+    Menu -->|Plant New| AddTreeForm
+    Menu -->|Account Trees| AccountTreeList
+    UserTreeList --> TreeDetail
 
 ```
